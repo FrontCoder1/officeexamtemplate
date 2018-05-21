@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>table</title>
+    <link rel="stylesheet" href="/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="/css/public/style.css">
+</head>
+<body>
+<div class="contentbox">
+    <div class="demoTable inblock">
+        <div class="layui-inline">
+            <input class="layui-input" name="keyword" maxlength="25" id="demoReload" autocomplete="off" placeholder="请输入要搜索的内容">
+        </div>
+        <button class="layui-btn" data-type="reload">搜索</button>
+        <button class="layui-btn layui-btn-normal" data-type="getCheckData">获取选中题目的编号</button>
+        <button class="layui-btn layui-btn-warm" data-type="getCheckLength">获取选中数目</button>
+        <button class="layui-btn layui-btn-danger" data-type="sendData">提交</button>
+    </div>
+    <table id="demo" lay-filter="useruv"></table>
+</div>
+
+
+<script src="/layui/layui.js"></script>
+<script type="text/html" id="barDemo">
+    <a class="layui-btn  layui-btn-danger layui-btn-mini layui-btn-sm" lay-event="detail">详情</a>
+</script>
+<script src="/javascripts/classes/recordchoose.js"></script>
+</body>
+</html>

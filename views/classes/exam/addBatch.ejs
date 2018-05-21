@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>table模块快速使用</title>
+    <link rel="stylesheet" href="/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="/css/public/style.css">
+    <link rel="stylesheet" href="/css/admin/questionstable.css">
+</head>
+<body>
+<div class="contentbox">
+    <blockquote class="layui-elem-quote">
+        <span class="questiontitle">试题添加：</span>
+        <a href="/admin/question/add" class="layui-btn righta">返回单个添加试题</a>
+    </blockquote>
+    <h3 class="centerp">批量添加试题</h3>
+    <form class="centerform" action="/admin/question/add/batch" method="post" enctype="multipart/form-data">
+        <input type="file" name="filecontent" id="fileinput">
+        <div class="filebox" onclick="uploadfile()">
+            <img src="/images/file.jpg" alt="" class="fileimg">
+        </div>
+        <input type="submit" value="提交" class="layui-btn">
+    </form>
+    <script src="/javascripts/public/jquery.min.js"></script>
+    <script src="/layui/layui.js" charset="utf-8"></script>
+    <script src="/javascripts/admin/addBatch.js"></script>
+</div>
+</body>
+</html>

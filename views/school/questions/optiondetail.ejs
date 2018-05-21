@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>table模块快速使用</title>
+    <link rel="stylesheet" href="/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="/css/public/style.css">
+    <link rel="stylesheet" href="/css/admin/questionstable.css">
+</head>
+<body>
+<div class="contentbox">
+    <blockquote class="layui-elem-quote">
+        <span class="questiontitle">试题详情如下：</span>
+    </blockquote>
+    <blockquote class="layui-elem-quote layui-quote-nm">
+        试题等级：<span class="questiontitle layui-text"><%= optiondata.grade%></span>
+        类型：<span class="questiontitle"><%= optiondata.type%></span>
+        分值：<span class="questiontitle"><%= optiondata.score%></span>
+    </blockquote>
+    <div class="questioncenter">
+        <p><span class="bigfont color1">题目：</span><span class="littlefont"><%- optiondata.title%></span></p>
+        <div class="answer1">
+            <p><span class="bigfont color1">解析：</span><span class="littlefont"><%- optiondata.analysis%></span></p>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>table</title>
+    <link rel="stylesheet" href="/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="/css/public/style.css">
+    <link rel="stylesheet" href="/css/admin/questionstable.css">
+</head>
+<body>
+<div class="contentbox1">
+    <blockquote class="layui-elem-quote">
+        <span class="questiontitle">权限修改：</span>
+    </blockquote>
+    <form class="layui-form" action="">
+        <div class="layui-form-item">
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">权限名称</label>
+                <div class="layui-input-block">
+                    <input type="text" name="name" maxlength="25" autocomplete="off" placeholder="请输入权限名称" class="layui-input" value="<%= updatadata.name%>">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">权限路径</label>
+                <div class="layui-input-block">
+                    <input type="text" name="path" maxlength="25" autocomplete="off" placeholder="请输入权限路径" class="layui-input" value="<%= updatadata.path%>">
+                </div>
+            </div>
+        </div>
+
+
+        <input type="hidden" name="id"  value="<%= updatadata.id%>" class="layui-input">
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </form>
+    <script src="/layui/layui.js" charset="utf-8"></script>
+    <script src="/javascripts/admin/updatapermission.js"></script>
+</div>
+</body>
+</html>

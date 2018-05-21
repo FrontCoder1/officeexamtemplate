@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>更新选择题</title>
+    <link rel="stylesheet" href="/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="/css/public/style.css">
+    <link rel="stylesheet" href="/css/admin/questionstable.css">
+</head>
+<body>
+<div class="contentbox">
+    <blockquote class="layui-elem-quote">
+        <span class="questiontitle">试题修改：</span>
+    </blockquote>
+    <form class="layui-form" action="">
+        <div class="layui-form-item">
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">题干</label>
+                <% if(updatadata.url) {%>
+                <% var url = updatadata.url.replace(/Picture:/,"") %>
+                <div class="showImg">
+                    <img src= "/chooseFile/<%= url %>" alt="">
+                    <!--<div class="imageWidth mar20">-->
+                    <!--<input type="file" name="title1" id="" value="" class="imagefile">-->
+                    <!--<button type="button" class="layui-btn layui-btn-danger imagebtn"><i class="layui-icon"></i>修改图片</button>-->
+                    <!--<span class="filetitle">未选择图片</span>-->
+                    <!--</div>-->
+                </div>
+                <input type="hidden" name="title" value="<%= updatadata.title%>">
+                <div class="clearbox"></div>
+                <% } else {%>
+                <div class="layui-input-block">
+                    <textarea class="layui-textarea questionask" name="title" rows="2"><%= updatadata.title%></textarea>
+                </div>
+                <% } %>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">选项A</label>
+                <% if(/^(Picture:)/.test(updatadata.option_a)) {%>
+                <% var optionA = updatadata.option_a.replace(/Picture:/,"") %>
+                <div class="showOption">
+                    <img src= "/chooseFile/<%= optionA %>" alt="">
+                </div>
+                <input type="hidden" name="option_a" value="<%= updatadata.option_a%>">
+                <div class="clearbox"></div>
+                <% } else {%>
+                <div class="layui-input-block">
+                    <textarea class="layui-textarea questionask" name="option_a" rows="1"><%= updatadata.option_a%></textarea>
+                </div>
+                <% } %>
+
+                <div class="clearbox"></div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">选项B</label>
+                <% if(/^(Picture:)/.test(updatadata.option_b)) {%>
+                <% var optionB = updatadata.option_b.replace(/Picture:/,"") %>
+                <div class="showOption">
+                    <img src= "/chooseFile/<%= optionB %>" alt="">
+                </div>
+                <input type="hidden" name="option_b" value="<%=updatadata.option_b%>">
+                <div class="clearbox"></div>
+                <% } else {%>
+                <div class="layui-input-block">
+                    <textarea class="layui-textarea questionask" name="option_b" rows="1"><%= updatadata.option_b%></textarea>
+                </div>
+                <% } %>
+            </div>
+        </div><div class="layui-form-item">
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">选项C</label>
+                <% if(/^(Picture:)/.test(updatadata.option_c)) {%>
+                <% var optionC = updatadata.option_c.replace(/Picture:/,"") %>
+                <div class="showOption">
+                    <img src= "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                <input type="hidden" name="option_c" value="<%= updatadata.option_c%>">
+                <div class="clearbox"></div>
+                <% } else {%>
+                <div class="layui-input-block">
+                    <textarea class="layui-textarea questionask" name="option_c" rows="1"><%= updatadata.option_c%></textarea>
+                </div>
+                <% } %>
+            </div>
+        </div><div class="layui-form-item">
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">选项D</label>
+                <% if(/^(Picture:)/.test(updatadata.option_d)) {%>
+                <% var optionD = updatadata.option_d.replace(/Picture:/,"") %>
+                <div class="showOption">
+                    <img src= "/chooseFile/<%= optionD %>" alt="">
+                </div>
+                <input type="hidden" name="option_d" value="<%= updatadata.option_d%>">
+                <div class="clearbox"></div>
+                <% } else {%>
+                <div class="layui-input-block">
+                    <textarea class="layui-textarea questionask" name="option_d" rows="1"><%= updatadata.option_d%></textarea>
+                </div>
+                <% } %>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">试题等级</label>
+                <div class="layui-input-block">
+                    <% if(updatadata.gradeId == "1") {%>
+                    <input type="radio" name="gradeId" value="1" title="一级" checked>
+                    <input type="radio" name="gradeId" value="2" title="二级">
+                    <%} else{%>
+                    <input type="radio" name="gradeId" value="1" title="一级" >
+                    <input type="radio" name="gradeId" value="2" title="二级" checked>
+                    <%}%>
+
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">试题分值</label>
+                <div class="layui-input-inline">
+                    <input type="text" value="<%= updatadata.score%>" name="score" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline" style="display: none">
+                <label class="layui-form-label">试题类型</label>
+                <div class="layui-input-inline">
+                    <input type="text" value="6" name="typeId" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+        </div>
+        <div class="layui-form-item" style="display: none">
+            <label class="layui-form-label">学校</label>
+            <div class="layui-input-block">
+                <input type="text"  placeholder="" autocomplete="off" class="layui-input" value="<%= updatadata.school%>">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">试题答案</label>
+            <div class="layui-input-block">
+                <input type="text" name="answer" lay-verify="answer" placeholder="" value="<%= updatadata.answer%>" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <input type="hidden" name="id"  value="<%= updatadata.id%>" class="layui-input">
+        <input type="hidden" name="typeId"  value="<%= updatadata.typeId%>" class="layui-input">
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">试题解析</label>
+            <div class="layui-input-block">
+                <textarea placeholder="请输入内容" name="analysis" rows="5" class="layui-textarea questionask"><%= updatadata.analysis%></textarea>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </form>
+    <script src="/layui/layui.js" charset="utf-8"></script>
+    <script src="/javascripts/school/updatachoose.js"></script>
+</div>
+</body>
+<script src="/javascripts/public/jquery.min.js"></script>
+<!--<script>-->
+
+
+<!--$(".imagebtn").click(function () {-->
+<!--$(this).prev().click();-->
+<!--$(this).prev().change(function () {-->
+<!--var title = $(this).val();-->
+<!--if(title){-->
+<!--_name = title;-->
+<!--_fileName = _name.substring(_name.lastIndexOf(".") + 1).toLowerCase();-->
+<!--if (_fileName !== "png" && _fileName !== "jpg"&&_fileName !== "gif"&&_fileName !== "jpeg"&&_fileName !== "bmp") {-->
+<!--$(this).nextAll(".filetitle").html("上传图片格式不正确");-->
+<!--}else{-->
+<!--var arrs=title.split('\\');-->
+<!--var filename=arrs[arrs.length-1];-->
+<!--$(this).nextAll(".filetitle").html(filename);-->
+<!--}-->
+
+<!--}-->
+
+<!--})-->
+<!--})-->
+<!--</script>-->
+</html>

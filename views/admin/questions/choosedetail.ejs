@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>table模块快速使用</title>
+    <link rel="stylesheet" href="/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="/css/public/style.css">
+    <link rel="stylesheet" href="/css/admin/questionstable.css">
+</head>
+<body>
+<div class="contentbox">
+    <blockquote class="layui-elem-quote">
+        <span class="questiontitle">试题详情如下：</span>
+    </blockquote>
+    <blockquote class="layui-elem-quote layui-quote-nm">
+        试题等级：<span class="questiontitle layui-text"><%= choosedata.grade%></span>
+        类型：<span class="questiontitle">选择题</span>
+        学校：<span class="questiontitle"><%= choosedata.school%></span>
+        分值：<span class="questiontitle"><%= choosedata.score%>分</span>
+    </blockquote>
+    <div class="questioncenter">
+        <div>
+            <span class="bigfont color1">题目：</span>
+            <div class="showOption">
+                <span class="littlefont"><%- choosedata.title%></span>
+            </div>
+
+        </div>
+        <div class="answer">
+            <div class="answers">
+                <span class="color4">选项A：</span>
+
+                <div class="showOption">
+                    <span><%- choosedata.option_a%></span>
+                </div>
+
+                <div class="clearbox"></div>
+            </div>
+            <div class="answers">
+
+                <div class="showOption">
+                    <span><%- choosedata.option_b%></span>
+                </div>
+                <div class="clearbox"></div>
+            </div>
+            <div class="answers">
+                <span class="color4">选项C：</span>
+
+                <div class="showOption">
+                    <span><%- choosedata.option_c%></span>
+                </div>
+                <div class="clearbox"></div>
+            </div>
+            <div class="answers">
+                <span class="color4">选项D：</span>
+
+                <div class="showOption">
+                    <span><%- choosedata.option_d%></span>
+                </div>
+
+                <div class="clearbox"></div>
+            </div>
+
+        </div>
+        <div><span class="bigfont color2">答案：</span><span class="littlefont"><%= choosedata.answer%></span></div>
+        <div class="mart20"><span class="bigfont color3">答案解析：</span>
+            <div class="showOption">
+                <span class="littlefont"><%- choosedata.analysis%></span>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

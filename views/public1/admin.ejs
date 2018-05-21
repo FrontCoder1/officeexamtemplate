@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>计算机应用基础自主学习与考试系统后台管理</title>
+    <link rel="stylesheet" href="/layui/css/layui.css">
+    <!--<link rel="stylesheet" href="/css/public/main.css">-->
+    <link rel="stylesheet" href="/css/public/index.css">
+    <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
+
+    <link rel="stylesheet" href="/build/css/app.css" media="all">
+
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <div class="layui-logo logo">欢迎进入管理页面</div>
+        <!-- 头部区域（可配合layui已有的水平导航） -->
+        <!--<h2 class="layui-layout-left welcometitle">欢迎进入后台管理页面</h2>-->
+        <!--<ul class="layui-nav layui-layout-left">-->
+            <!--<li class="layui-nav-item"><span></span></li>-->
+            <!--</li>-->
+        <!--</ul>-->
+        <div class="titleBard">
+            计算机应用基础自主学习与考试系统
+        </div>
+        <ul class="layui-nav layui-layout-right" lay-filter="kitNavbar" kit-navbar>
+
+            <li class="layui-nav-item">
+                <i class="layui-icon" style="font-size: 20px; margin-right: 5px"> &#xe612;</i><%= role%>
+
+            </li>
+
+            <% for(var i=0;i<sideitems.length;i++) {%>
+                <% if(sideitems[i].data=='个人中心'){%>
+                    <% for(var j=0;j<sideitems[i]['child'].length;j++) {%>
+                         <% if(sideitems[i]['child'][j].data=='退出登录'){%>
+                            <li class="layui-nav-item"> <a class="site-demo-active" data-icon="<%- sideitems[i]['child'][j].cicon%> " data-url="<%= sideitems[i]['child'][j].href%>" data-id="<%= "id"+i+j%>" data-title="<%= sideitems[i]['child'][j]['data']%>" kit-target href="javascript:;"><i class="layui-icon icon"><%- sideitems[i]['child'][j].cicon%></i><%= sideitems[i]['child'][j]['data']%></a>
+                            </li>
+                        <%}%>
+                    <%}%>
+                <%}%>
+            <%}%>
+        </ul>
+    </div>
+
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree"  lay-filter="kitNavbar" kit-navbar>
+                <% for(var i=0;i<sideitems.length;i++) {%>
+                    
+
+                    <% if(i==0){%>
+                        <li class="layui-nav-item layui-nav-itemed">
+                    <%} else{%>
+                         <li class="layui-nav-item">
+                    <%}%>
+                    <% if (sideitems[i]['child'].length>0) {%>
+                        <a class="" href="javascript:;"><i class="layui-icon icon"><%- sideitems[i].cicon%></i><%= sideitems[i].data%></a>
+                        <dl class="layui-nav-child">
+                            <% for(var j=0;j<sideitems[i]['child'].length;j++) {%>
+                            <%if(sideitems[i]['child'][j]['data']=="添加角色") {%>
+                                <% continue; %>
+                            <%}%>
+                            <dd class="secondItems"><a class="site-demo-active" data-icon="<%- sideitems[i]['child'][j].cicon%> " data-url="<%= sideitems[i]['child'][j].href%>" data-id="<%= "id"+i+j%>" data-title="<%= sideitems[i]['child'][j]['data']%>" kit-target href="javascript:;"><i class="layui-icon icon"><%- sideitems[i]['child'][j].cicon%></i><%= sideitems[i]['child'][j]['data']%></a></dd>
+                            <%}%>
+                        </dl>
+                    <%} else{%>
+
+                    <%}%>
+
+                    </li>
+                <%}%>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="layui-body" id="container">
+        <!-- 内容主体区域 -->
+        <!--<iframe name="ifr"></iframe>-->
+        <div class="loadingbox"><i class="layui-icon">&#xe63d;</i></div>
+    </div>
+
+    <div class="layui-footer center">
+        技术支持：慧农软件技术有限公司
+    </div>
+</div>
+<script src="/layui/layui.js"></script>
+
+<script>
+    //JavaScript代码区域
+    layui.use(['element'], function(){
+        var element = layui.element;
+        var $ = layui.jquery;
+        $(".layui-nav .layui-nav-item a").on("click",function() {
+            $(this).parent("li").siblings().removeClass("layui-nav-itemed");
+        });
+
+    });
+
+</script>
+
+<script>
+    layui.config({
+        base: '/build/js/'
+    }).use(['app'], function() {
+        var app = layui.app,
+            $ = layui.jquery,
+            layer = layui.layer;
+        //主入口
+        app.set({
+            type: 'iframe'
+        }).init();
+
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>学生信息修改</title>
+    <link rel="stylesheet" href="/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="/css/public/style.css">
+    <link rel="stylesheet" href="/css/classes/questionstable.css">
+</head>
+<body>
+<div class="contentbox1">
+    <blockquote class="layui-elem-quote">
+        <span class="questiontitle">学生信息修改：</span>
+    </blockquote>
+    <form class="layui-form" action="">
+        <div class="layui-form-item">
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">学生账号</label>
+                <div class="layui-input-block">
+                    <input type="text" disabled autocomplete="off" maxlength="25" placeholder="" class="layui-input" value="<%= updatadata.username%>">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">学生姓名</label>
+                <div class="layui-input-block">
+                    <input type="text" autocomplete="off" name="name"  maxlength="25" placeholder="" class="layui-input" value="<%= updatadata.name%>">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">学生电话</label>
+                <div class="layui-input-block">
+                    <input type="text" autocomplete="off" name="phone" lay-verify="tel" maxlength="25" class="layui-input" value="<%= updatadata.phone%>">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="layui-form-item">
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">密码</label>
+                <div class="layui-input-block">
+                    <input type="password" name="password" id="psw1" lay-verify="pass" placeholder="请输入密码" autocomplete="new-password" value="<%= updatadata.password%>" class="layui-input">
+                    <div class="layui-form-mid layui-word-aux">请填写6到15位密码</div>
+                </div>
+            </div>
+        </div>
+
+        <input type="hidden" name="id"  value="<%= updatadata.id%>" class="layui-input">
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </form>
+    <script src="/layui/layui.js" charset="utf-8"></script>
+    <script src="/javascripts/classes/updatauser.js"></script>
+</div>
+</body>
+</html>

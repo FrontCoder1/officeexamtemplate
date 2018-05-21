@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>后台管理页面</title>
+    <link rel="stylesheet" href="/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="/css/public/style.css">
+</head>
+<body>
+<div class="contentbox">
+    <div class="demoTable inblock">
+        <div class="layui-inline">
+            <input class="layui-input" maxlength="25" name="keyword" id="demoReload" autocomplete="off" placeholder="权限名称">
+        </div>
+        <button class="layui-btn layui-btn1" data-type="reload">搜索</button>
+    </div>
+    <table id="demo" lay-filter="useruv"></table>
+</div>
+
+
+<script src="/layui/layui.js"></script>
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-danger layui-btn-sm" lay-event="edit">分配权限</a>
+</script>
+<script src="/javascripts/admin/divisionPermistable.js"></script>
+</body>
+</html>

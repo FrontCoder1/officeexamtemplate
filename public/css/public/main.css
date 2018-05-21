@@ -1,0 +1,59 @@
+
+
+.indexpage{
+    width: 85%;
+    margin: 0 auto;
+    min-width: 960px;
+    padding: 50px 0;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.item{
+    width: 43%;
+    height: 150px;
+    margin-bottom: 30px;
+}
+.clearbox{
+    width: 100%;
+    height: 0px;
+    clear: both;
+}
+.itemleft{
+    width: 35%;
+    height: 100%;
+    text-align: center;
+    line-height: 150px;
+    overflow: hidden;
+}
+.itemleft>i{
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+}
+.itemright{
+    width: 65%;
+    height: 100%;
+    background-color: #F2F2F2;
+    box-shadow: 0 0 10px #ccc;
+    text-align: center;
+    line-height: 150px;
+    overflow: hidden;
+    font-size: 20px;
+    font-weight: bold;
+}
+.color1{
+    background: #00c0ef;
+}
+.color2{
+    background: #dd4b39;
+}
+.color3{
+    background: #00a65a;
+}
+.color4{
+    background: #f39c12;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>table模块快速使用</title>
+    <link rel="stylesheet" href="/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="/css/public/style.css">
+    <link rel="stylesheet" href="/css/admin/questionstable.css">
+</head>
+<body>
+<div class="contentbox">
+    <blockquote class="layui-elem-quote">
+        <span class="questiontitle">试题添加：</span>
+        <a href="/school/question/add" class="layui-btn righta">返回单个添加试题</a>
+    </blockquote>
+    <h3 class="centerp">批量添加试题</h3>
+    <div class="layui-upload uploadcenter">
+        <a class="layui-btn layui-btn-normal layui-btn3" href="/school/question/add/batch/downmould">下载模板</a>
+
+        <button type="button" class="layui-btn layui-btn-danger" id="test8"><i class="layui-icon"></i>选择文件</button>
+        <button type="button" class="layui-btn" id="test9">提交</button>
+
+        <div class="layui-word-aux mar20">
+            <p>批量上传选择题的文件必须是后缀为.xlsx的Excel文件，请参考模板文件。表格共有8列，从左到右依次是：考试等级，题目要求，选项A，选项B，选项C，选项D，答案，答案解析。</p>
+        </div>
+    </div>
+    <script src="/javascripts/public/jquery.min.js"></script>
+    <script src="/layui/layui.js" charset="utf-8"></script>
+    <script src="/javascripts/school/addBatch.js"></script>
+</div>
+</body>
+</html>

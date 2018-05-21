@@ -1,0 +1,136 @@
+var menu_data = [
+    //  第一个
+    {
+        "data":"用户管理",
+        "cicon":"&#xe613;",
+        "href":"",
+        "child":[
+            {
+                "data":"添加用户",
+                "cicon":"&#xe608;",
+                "href":"/admin/user/add"
+            },
+            {
+                "data":"查看用户",
+                "cicon":"&#xe62d;",
+                "href":"/admin/user/see"
+            }
+        ]
+    },
+    //  第二个
+    {
+        "data":"权限管理",
+        "cicon":"&#xe630;",
+        "href":"/admin",
+        "child":[
+            {
+                "data":"添加权限",
+                "cicon":"&#xe608;",
+                "href":"/admin/permission/add"
+            },
+            {
+                "data":"查看权限",
+                "cicon":"&#xe62d;",
+                "href":"/admin/permission/see"
+            }
+        ]
+    },
+    //  第三个
+    {
+        "data":"角色管理",
+        "cicon":"&#xe609;",
+        "href":"",
+        "child":[
+            {
+                "data":"添加角色",
+                "cicon":"&#xe608;",
+                "href":"/admin/role/add"
+            },
+            {
+                "data":"查看角色",
+                "cicon":"&#xe62d;",
+                "href":"/admin/role/see"
+            }
+        ]
+    },
+    //  第四个
+    {
+        "data":"类型管理",
+        "cicon":"&#xe6b2;",
+        "href":"",
+        "child":[
+            {
+                "data":"添加类型",
+                "cicon":"&#xe608;",
+                "href":"/admin/type/add"
+            },
+            {
+                "data":"查看类型",
+                "cicon":"&#xe62d;",
+                "href":"/admin/type/see"
+            }
+        ]
+    },
+    //  第五个
+    {
+        "data":"试题管理",
+        "cicon":"&#xe61d;",
+        "href":"",
+        "child":[
+            {
+                "data":"添加试题",
+                "cicon":"&#xe654;",
+                "href":"/admin/question/add"
+            },
+            {
+                "data":"查看试题",
+                "cicon":"&#xe62d;",
+                "href":"/admin/question/see"
+            },
+            {
+                "data":"添加操作试题",
+                "cicon":"&#xe61f;",
+                "href":"/admin/question/addoper"
+            }
+        ]
+    },
+    //  第六个
+    {
+        "data":"考试管理",
+        "cicon":"&#xe705;",
+        "href":"",
+        "child":[
+            {
+                "data":"发起考试",
+                "cicon":"&#xe6af;",
+                "href":"/admin/exam/start"
+            },
+            {
+                "data":"考试记录",
+                "cicon":"&#xe69c;",
+                "href":"/admin/exam/record"
+            }
+        ]
+    },
+    //  第七个
+    {
+        "data":"个人中心",
+        "cicon":"&#xe612;",
+        "href":"",
+        "child":[
+            {
+                "data":"个人信息",
+                "cicon":"&#xe632;",
+                "href":"/admin/personal/information"
+            },
+            {
+                "data":"退出登录",
+                "cicon":"&#xe64d;",
+                "href":"/admin/personal/loginout"
+            }
+        ]
+    }
+
+]
+
+exports.menu_data = menu_data;

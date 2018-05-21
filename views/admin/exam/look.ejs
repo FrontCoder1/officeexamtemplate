@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>后台管理页面</title>
+    <link rel="stylesheet" href="/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="/css/public/style.css">
+</head>
+<body>
+<div class="contentbox">
+    <div class="demoTable inblock">
+        <div class="layui-inline">
+            <input class="layui-input" name="keyword" maxlength="25" id="demoReload" autocomplete="off" placeholder="名称/班级
+">
+        </div>
+        <button class="layui-btn layui-btn1" data-type="reload">搜索</button>
+        <button class="layui-btn layui-btn-danger layui-btn2" data-type="sendData">批量删除</button>
+
+    </div>
+    <table id="demo" lay-filter="useruv"></table>
+</div>
+
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-danger layui-btn-mini layui-btn-sm" lay-event="del">删除</a>
+</script>
+<script src="/layui/layui.js"></script>
+<script src="/javascripts/admin/seeexamtable.js"></script>
+</body>
+</html>

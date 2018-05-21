@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>后台管理页面</title>
+    <link rel="stylesheet" href="/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="/css/public/style.css">
+</head>
+<body>
+<div class="demoTable">
+    <!--<div class="layui-inline">-->
+        <!--<input class="layui-input" maxlength="25" name="keyword" id="demoReload" autocomplete="off">-->
+    <!--</div>-->
+    <!--<button class="layui-btn" data-type="reload">搜索</button>-->
+    <button class="layui-btn layui-btn-danger" data-type="add"><i class="layui-icon icontitle">&#xe608;</i>添加角色</button>
+
+</div>
+    <table id="demo" lay-filter="useruv"></table>
+<script src="/layui/layui.js"></script>
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-mini layui-btn-sm" lay-event="edit">修改</a>
+    <a class="layui-btn layui-btn-danger layui-btn-mini layui-btn-sm" lay-event="del">删除</a>
+</script>
+<script src="/javascripts/admin/seeroletable.js"></script>
+</body>
+</html>

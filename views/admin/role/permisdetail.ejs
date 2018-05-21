@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>后台管理页面</title>
+    <link rel="stylesheet" href="/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="/css/public/style.css">
+</head>
+<body>
+<form class="layui-form formtop" action="">
+    <div class="layui-form-item" pane="" >
+        <div class="checkboxml">
+            <input type="checkbox"  name="ownerCost" lay-skin="primary" id="owner_all" lay-filter="owner_all" title="全选" value="(1)-(10)">
+        </div>
+        <% for(var i=0;i<resdata.length;i++){ %>
+            <% if(resdata[i].select){%>
+                    <div class="checkboxml">
+                        <input type="checkbox" class="ownerCost" name="select" value="<%= resdata[i].id%>" lay-skin="primary" title="<%= resdata[i].name%>" lay-filter="owner_one" checked="checked">
+                    </div>
+                <%} else{%>
+                    <div class="checkboxml">
+                        <input type="checkbox" class="ownerCost" name="select" value="<%= resdata[i].id%>" lay-skin="primary" title="<%= resdata[i].name%>" lay-filter="owner_one">
+                    </div>
+            <% }%>
+        <% } %>
+        <!--<div class="checkboxml">-->
+            <!--<input type="checkbox" class="ownerCost" name="like1[read]" lay-skin="primary" lay-filter="owner_one" title="阅读">-->
+        <!--</div>-->
+        <!--<div class="checkboxml">-->
+            <!--<input type="checkbox" class="ownerCost" name="like1[game]" lay-skin="primary" lay-filter="owner_one" title="游戏">-->
+        <!--</div>-->
+
+    </div>
+
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+        </div>
+    </div>
+</form>
+</body>
+<script src="/layui/layui.js"></script>
+<script src="/javascripts/admin/permisdetail.js"></script>
+<script>
+</script>
+</html>

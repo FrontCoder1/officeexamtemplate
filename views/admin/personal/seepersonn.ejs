@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>后台管理页面</title>
+    <link rel="stylesheet" href="/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="/css/public/style.css">
+    <link rel="stylesheet" href="/css/admin/questionstable.css">
+</head>
+<body>
+<div class="contentbox">
+    <blockquote class="layui-elem-quote">
+        <span class="questiontitle">个人信息：</span>
+        <a href="/admin/personal/see" class="layui-btn layui-btn-primary">查看个人信息</a>
+        <a href="/admin/question/updatapsw" class="layui-btn layui-btn-normal">修改密码</a>
+    </blockquote>
+    <form class="layui-form" action="">
+        <div class="layui-form-item">
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">用户名</label>
+                <div class="layui-input-block">
+                    <input type="text" name="username" maxlength="25" autocomplete="off" placeholder="请输入标题" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">姓名</label>
+                <div class="layui-input-block">
+                    <input type="text" name="name" maxlength="25" autocomplete="off" placeholder="请输入姓名" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">学校简称</label>
+                <div class="layui-input-block">
+                    <input type="text" name="schoolAbbreviation" maxlength="25" value="<%= updatadata.schoolAbbreviation%>" autocomplete="off" placeholder="请输入标题" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">班级</label>
+                <div class="layui-input-block">
+                    <input type="text" name="classes" maxlength="25" value="<%= updatadata.classes%>" autocomplete="off" placeholder="请输入标题" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">开始日期</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="startTime" id="date1" value="<%= updatadata.startTime%>" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">截止日期</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="stopTime" id="date" value="<%= updatadata.stopTime%>" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">电话</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="phone" maxlength="25" value="<%= updatadata.phone%>" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">最后一次登录时间</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="loginTime" id="date2" value="<%= updatadata.loginTime%>" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <!--username  name school schoolAbbreviation classes phone  startTime stopTime  loginTime-->
+        <input type="hidden" name="id" value="<%= updatadata.id%>">
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </form>
+    <script src="/layui/layui.js" charset="utf-8"></script>
+    <script src="/javascripts/admin/seeperson.js"></script>
+</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>后台管理页面</title>
+    <link rel="stylesheet" href="/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="/css/public/style.css">
+</head>
+<body>
+<form class="layui-form formcenter2" action="">
+    <div class="layui-form-item widthfix">
+        <label class="layui-form-label">选择父类型</label>
+        <div class="layui-input-block">
+            <select name="pId" lay-verify="required">
+                <option value="">选择父类型</option>
+                <option value="1">考试等级</option>
+                <option value="2">试题类型</option>
+            </select>
+        </div>
+    </div>
+    <div class="layui-form-item widthfix">
+        <label class="layui-form-label">请输入类型</label>
+        <div class="layui-input-block">
+            <input type="text" name="name" maxlength="25" required  lay-verify="required" placeholder="请输入类型" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+        </div>
+    </div>
+</form>
+</body>
+<script src="/layui/layui.js"></script>
+<script src="/javascripts/admin/addtype.js"></script>
+</html>

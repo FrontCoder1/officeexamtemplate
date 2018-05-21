@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="/css/public/style.css">
+    <link rel="stylesheet" href="/css/admin/questionstable.css">
+</head>
+<body>
+<div class="contentbox">
+    <blockquote class="layui-elem-quote">
+        <span class="questiontitle">试题添加：</span>
+        <a href="/school/question/add/batch" class="layui-btn righta">点击批量添加</a>
+    </blockquote>
+    <form class="layui-form" action="">
+        <h3 class="centerp">单个添加试题</h3>
+        <div class="layui-form-item">
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label labelStyle">题干</label>
+                <div class="layui-input-block">
+                    <textarea id="title" style="display: none;"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label labelStyle">选项A</label>
+                <div class="layui-input-block">
+                    <textarea id="option_a" style="display: none;"></textarea>
+                </div>
+
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label labelStyle">选项B</label>
+                <div class="layui-input-block">
+                    <textarea id="option_b" style="display: none;"></textarea>
+                </div>
+
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-form-item layui-form-text ">
+                <label class="layui-form-label labelStyle">选项C</label>
+                <div class="layui-input-block">
+                    <textarea id="option_c" style="display: none;"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label labelStyle">选项D</label>
+                <div class="layui-input-block">
+                    <textarea id="option_d" style="display: none;"></textarea>
+                </div>
+
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">试题等级</label>
+                <div class="layui-input-block">
+                    <input type="radio" name="gradeId" value="1" title="一级" checked>
+                    <input type="radio" name="gradeId" value="2" title="二级">
+                </div>
+            </div>
+            <div class="layui-inline" style="display: none">
+                <label class="layui-form-label">试题类型</label>
+                <div class="layui-input-inline">
+                    <input type="text" value="6" name="typeId" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">试题分值</label>
+                <div class="layui-input-inline">
+                    <input type="text" value="1" name="score" disabled autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">试题答案</label>
+            <div class="layui-input-block">
+                <div class="layui-input-inline">
+                    <select name="answer">
+                        <option value="A">选项A</option>
+                        <option value="B">选项B</option>
+                        <option value="C">选项C</option>
+                        <option value="D">选项D</option>
+                    </select>
+                </div>
+                <!--<input type="text" name="answer" maxlength="5" lay-verify="answer" placeholder="" value="" autocomplete="off" class="layui-input">-->
+            </div>
+        </div>
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label labelStyle">试题解析</label>
+            <div class="layui-input-block">
+                <textarea id="analysis" style="display: none;"></textarea>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+                <button class="layui-btn layui-btn-primary btns" >重置</button>
+            </div>
+        </div>
+    </form>
+    <script src="/layui/layui.js" charset="utf-8"></script>
+    <script src="/javascripts/admin/addchoose.js"></script>
+</div>
+</body>
+</html>

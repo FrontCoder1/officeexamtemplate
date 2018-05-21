@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>table</title>
+    <link rel="stylesheet" href="/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="/css/public/style.css">
+    <link rel="stylesheet" href="/css/admin/questionstable.css">
+</head>
+<body>
+<div class="contentbox">
+    <blockquote class="layui-elem-quote">
+        <span class="questiontitle">用户添加：</span>
+    </blockquote>
+    <form class="layui-form" action="">
+        <div class="layui-form-item">
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">学校简称</label>
+                <div class="layui-input-block">
+                    <input type="text" maxlength="25" name="schoolAbbreviation" value="" lay-verify="content" autocomplete="off" placeholder="请输入学校简称" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">学校名称</label>
+                <div class="layui-input-block">
+                    <input type="text" name="school" maxlength="25" value="" autocomplete="off" lay-verify="schoolContent" placeholder="请输入学校名称" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">开始日期</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="startTime" id="date1" value="" lay-verify="time" placeholder="yyyy-MM-dd HH:mm:ss" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">截止日期</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="stopTime" id="date" value="" lay-verify="time" placeholder="yyyy-MM-dd HH:mm:ss" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">生成数量</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="num" maxlength="25" value="" lay-verify="number" placeholder="输入大于0的正整数" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </form>
+    <script src="/layui/layui.js" charset="utf-8"></script>
+    <script src="/javascripts/admin/adduser.js"></script>
+</div>
+</body>
+</html>

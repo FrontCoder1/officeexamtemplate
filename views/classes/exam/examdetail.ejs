@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>table模块快速使用</title>
+    <link rel="stylesheet" href="/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="/css/public/style.css">
+</head>
+<body>
+<div class="contentbox">
+    <div class="demoTable inblock">
+        <div class="layui-inline">
+            <input class="layui-input" name="keyword" maxlength="25" id="demoReload" autocomplete="off" placeholder="用户名/名称">
+        </div>
+        <button class="layui-btn layui-btn1" data-type="reload">搜索</button>
+        <button class="layui-btn layui-btn-danger layui-btn3">导出成绩</button>
+        <button class="layui-btn layui-btn-normal layui-btn4">下载本班答卷</button>
+
+        <!--<a class="layui-btn layui-btn-danger layui-btn3" href="/classes/exam/see/examdetail/downclassscore">导出成绩</a>-->
+        <!--<a class="layui-btn layui-btn-normal layui-btn4" href="/classes/exam/see/examdetail/downclassanswer">下载本班级考生试卷</a>-->
+    </div>
+    <table id="demo" lay-filter="useruv"></table>
+</div>
+
+
+<script src="/layui/layui.js"></script>
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-normal layui-btn-mini layui-btn-sm" lay-event="detail">下载答卷</a>
+</script>
+<script src="/javascripts/classes/examdetail.js"></script>
+</body>
+</html>

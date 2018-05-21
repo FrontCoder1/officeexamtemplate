@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>后台管理页面</title>
+    <link rel="stylesheet" href="/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="/css/public/style.css">
+</head>
+<body>
+<form class="layui-form formcenter" action="">
+    <div class="layui-form-item widthfix">
+        <label class="layui-form-label">请输入角色</label>
+        <div class="layui-input-block">
+            <input type="text" name="name" maxlength="25" required  lay-verify="required" placeholder="请输入角色名称" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+        </div>
+    </div>
+</form>
+</body>
+<script src="/layui/layui.js"></script>
+<script src="/javascripts/admin/addrole.js"></script>
+</html>

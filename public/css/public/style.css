@@ -1,0 +1,178 @@
+.layui-body{overflow-y: scroll;}
+body{overflow-y:scroll}
+
+/*.layui-tab-content{*/
+  /*min-width: 1000px;*/
+/*}*/
+
+.demoTable{
+  width: 960px;
+  margin: 20px auto;
+  text-align: left;
+}
+.demoTable .layui-input{
+  width: 260px;
+}
+.layui-table-box, .layui-table-view{
+  margin: 0 auto;
+}
+
+.widthfix{
+  width:480px
+}
+
+.formcenter{
+  width: 480px;
+  padding-top: 30px;
+  /*position: absolute;!*绝对定位*!*/
+  /*height: 200px;*/
+  /*top: 50%;*/
+  /*left: 50%;*/
+  /*margin-top: -130px;*/
+  /*margin-left: -250px;*/
+}
+.formcenter2{
+  width: 480px;
+  position: absolute;/*绝对定位*/
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  margin-top: -130px;
+  margin-left: -250px;
+}
+.formcenter1{
+  width: 500px;
+  position: absolute;/*绝对定位*/
+  height: 200px;
+  margin-top: 50px;
+  left: 50%;
+  margin-left: -250px;
+}
+.contentbox{
+  padding:20px;
+  min-width: 960px;
+}
+.contentbox1{
+  padding:20px;
+}
+.inblock{
+  display: inline-block !important;
+  margin-left: 0 !important;
+}
+.downs:hover{
+  color:blue;
+}
+.tabletitle{
+  margin-bottom: 20px;
+  text-align: center;
+}
+.checkboxml{
+  margin-left:20px;
+}
+.formtop{
+  padding-top:20px;
+}
+.uploadcenter{
+  text-align: center;
+}
+.fileexample{
+    width:100%;
+}
+.fileexample>img{
+    width: 100%;
+}
+.mar20{
+  margin-top:20px;
+}
+.icontitle{
+  font-size: 20px !important;
+  font-weight: bold;
+}
+.formMin{
+  min-width: 960px;
+}
+.titleWidth{
+  width: 70%;
+  display: inline-block;
+  vertical-align: top;
+
+}
+.titleWidth .layui-input-block{
+  margin-left:0 !important ;
+}
+.imageWidth{
+  /*position: relative;*/
+  width: 150px;
+  /*height: 38px;*/
+  /*text-align: center;*/
+  vertical-align: top;
+  display: inline-block;
+  /*cursor: pointer;*/
+  overflow: hidden;
+}
+.imagefile{
+  display: none;
+  /*width: 115px;*/
+  /*display: inline-block;*/
+  /*background-color: red;*/
+  /*padding:10px;*/
+  /*position: absolute;*/
+  /*opacity: 0;*/
+  /*cursor: pointer;*/
+  /*z-index: 2;*/
+}
+.filetitle{
+  padding: 5px 0 0 5px;
+  color:rgba(0,0,0,.7)
+}
+.showImg{
+  /*float: left;*/
+  vertical-align: top;
+  margin-left: 50px;
+  display: inline-block;
+  max-width: 700px;
+  /*margin: 0 auto;*/
+}
+.showImg>img{
+  width: 100%;
+}
+.showOption{
+  /*float: left;*/
+  vertical-align: top;
+  display: inline-block;
+  max-width: 700px;
+  margin:20px 0px 20px 30px;
+}
+.showOption>img{
+  width: 100%;
+}
+.clearfix:after{
+
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  width: 100%;
+  zoom: 1;
+
+}
+.clearbox{
+  width: 100%;
+  height: 0;
+  clear: both;
+}
+.imageWidth1{
+  width: 100%;
+  vertical-align: top;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.examTitle{
+  padding-left:38px;
+  color:rgba(0,0,0,.5);
+}
+.labelStyle{
+  font-weight: bold;
+  letter-spacing: 2px;
+}
